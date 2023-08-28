@@ -1,0 +1,96 @@
+/* Color Variables */
+:root {
+  --text-color: #121212;
+  --gray-200: #e4e4e7;
+  --gray-50: #fafafa;
+  --gray-special: #222225;
+  --gray-300: #d4d4d8;
+  --gray-00-white: #fff;
+}
+
+/* Global */
+html {
+  font-family: "Inter", sans-serif;
+}
+
+/* Layout */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1,
+h2 {
+  color: var(--text-color);
+  font-family: "Sora", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.8rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Paragraphs */
+p {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  min-height: 52px;
+}
+
+/* Challenges */
+.challenge {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  align-items: flex-start;
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+/* Grid */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 5%;
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  color: var(--gray-special);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-00-white);
+  text-align: center;
+}
