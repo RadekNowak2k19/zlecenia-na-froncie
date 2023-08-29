@@ -1,0 +1,42 @@
+* {
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	display: flex;
+	padding: 37px 0px 157.799px 0px;
+	justify-content: center;
+	align-items: flex-end;
+	background: #05077d;
+	width: 100%;
+	overflow: hidden;
+	height: 90vh;
+}
+.panel {
+	background: #75fb8e;
+	white-space: nowrap;
+	display: flex;
+	transform: rotate(-8.323deg);
+	padding: 20px 0px;
+}
+.panel p {
+	color: #05077d;
+	text-align: center;
+	font-family: Impact;
+	font-size: 52px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 2.08px;
+	text-transform: uppercase;
+	animation: slide 15s linear infinite;
+}
+@keyframes slide {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
