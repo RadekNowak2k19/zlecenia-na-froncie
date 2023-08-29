@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Inter:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--abhayaFamily: "Abhaya Libre", serif;
+	--interFamily: "Inter", sans-serif;
+	--grayDefault: #c6c6c6;
+	--darkColor: #1d1d1d;
+}
+
+body {
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	width: 100%;
+	height: 100vh;
+}
+#root {
+	display: inline-flex;
+	height: 700px;
+	padding: 0px 347px 0px 314px;
+	align-items: center;
+}
+.navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+.list-top {
+	display: flex;
+	align-items: flex-start;
+	gap: 40px;
+}
+.list-bottom {
+	display: flex;
+	align-items: flex-start;
+	gap: 54px;
+}
+.list-top,
+.list-bottom {
+	list-style-type: none;
+}
+.list-item {
+	position: relative;
+	color: var(--grayDefault);
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	align-items: flex-start;
+	gap: 5px;
+	font-size: 30px;
+}
+.list-item:hover {
+	color: var(--darkColor);
+	cursor: pointer;
+}
+span {
+	order: -1;
+	font-size: 20px;
+}
+.image-container {
+	width: 325px;
+	height: 426px;
+	flex-shrink: 0;
+	position: absolute;
+	z-index: 10;
+	animation: opacity 0.5s ease-in-out;
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
