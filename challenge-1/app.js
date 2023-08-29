@@ -41,7 +41,7 @@ const renderItem = (name, index, image, positionX, positionY) => {
 	return itemElement;
 };
 
-// Item
+// Items
 t.appendChild(renderItem("interiors", 1, "hover-rectangle-1.png", 310, -200));
 t.appendChild(
 	renderItem("brand identity", 2, "hover-rectangle-2.png", 450, -50)
