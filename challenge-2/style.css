@@ -30,7 +30,10 @@ body {
 	line-height: normal;
 	letter-spacing: 2.08px;
 	text-transform: uppercase;
-	animation: slide 15s linear infinite;
+	animation: slide 20s linear infinite;
+}
+.panel p:hover {
+	animation-play-state: paused;
 }
 @keyframes slide {
 	0% {
