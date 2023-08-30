@@ -75,5 +75,4 @@ document.querySelector(".container").addEventListener("mouseenter", () => {
 	displayHI(38, 39);
 	displayHI(42, 49);
 	displayHI(56, 63);
-	clearInterval();
 });
