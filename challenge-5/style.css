@@ -1,0 +1,75 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+#root {
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: self-start;
+	position: relative;
+}
+.navigation {
+	width: 710px;
+	height: 700px;
+	flex-shrink: 0;
+	transform: translateX(-100%);
+	transition: transform 0.6s ease-in-out;
+}
+.navigation.active {
+	transform: translateX(0);
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+.btn {
+	z-index: 10;
+	position: absolute;
+	right: 2.5rem;
+	top: 2.5rem;
+	height: 49px;
+	flex-shrink: 0;
+	cursor: pointer;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	border: none;
+}
+.line {
+	width: 98px;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 50vh;
+}
+.line-1 {
+	transition: all 0.6s ease-in-out;
+}
+.line-2 {
+	transition: all 0.6s ease-in-out;
+	width: 62px;
+}
+.line-3 {
+	transition: all 0.6s ease-in-out;
+}
+.line-1.open {
+	transform: translateX(5px) rotate(45deg);
+	transform-origin: left top;
+	width: 60px;
+}
+.line-2.open {
+	transform: translateX(5%);
+	opacity: 0;
+	width: 60px;
+}
+.line-3.open {
+	transform: translateX(5px) rotate(-45deg);
+	transform-origin: left bottom;
+	width: 60px;
+}
