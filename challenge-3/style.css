@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--fontFamily: "Work Sans", sans-serif;
+	--lightPurple: #dcdefd;
+	--Purple: #6a6ef7;
+}
+body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+/* --- */
+.open-container,
+.close-container {
+	flex-direction: column;
+	gap: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 340px;
+	height: 187px;
+	flex-shrink: 0;
+	border-radius: 10px;
+	background: #fff;
+	z-index: 10;
+}
+.text {
+	text-align: center;
+	color: #000;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	width: 213px;
+	height: 36px;
+	flex-shrink: 0;
+}
+.btn,
+.close-btn {
+	display: inline-flex;
+	padding: 10px 30px;
+	align-items: flex-start;
+	gap: 10px;
+	border-radius: 40px;
+	background: var(--Purple);
+	color: var(--lightPurple);
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+.btn:hover,
+.close-btn:hover {
+	background-color: var(--lightPurple);
+	color: var(--Purple);
+}
+/* --- */
+.close-btn {
+	animation: closeBtn 0.3s ease-in-out forwards;
+}
+.btn {
+	animation: openBtn 0.3s ease-in-out forwards;
+}
+.close-container {
+	display: none;
+	animation: openPopup 0.5s ease-in-out forwards;
+	z-index: 10;
+}
+.close-container-back {
+	animation: closePopup 0.38s ease-in-out forwards;
+}
+.close {
+	display: none;
+}
+.active {
+	display: flex;
+}
+#root.bg::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	z-index: -20;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+}
+@keyframes closeBtn {
+	0% {
+		padding: 10px 30px;
+	}
+	50% {
+		padding: 10px 50px;
+	}
+	100% {
+		padding: 10px 40px;
+	}
+}
+@keyframes openBtn {
+	0% {
+		padding: 10px 40px;
+	}
+	100% {
+		padding: 10px 30px;
+	}
+}
+@keyframes openPopup {
+	0% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes closePopup {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
