@@ -70,9 +70,12 @@ faqElement.appendChild(faqHeading);
 faqElement.appendChild(paragraph);
 faqElement.appendChild(renderFaqList());
 
-const faq = document.querySelectorAll(".faq");
-faq.forEach(faq => {
+const faqEl = document.querySelectorAll(".faq");
+faqEl.forEach((faq, index) => {
 	faq.addEventListener("click", () => {
-		faq.classList.toggle("active");
+		faqEl.forEach(faq => {
+			faq.classList.remove("active");
+		});
+		faq.classList.add("active");
 	});
 });
