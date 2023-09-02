@@ -54,6 +54,10 @@ const runClock = (element, deg, unit) => {
 	runClockElement.style.transform = `rotate(${unit}deg)`;
 	return unit;
 };
+const runSeconds = () => {
+	const secondsElement = document.querySelector("seconds");
+};
+
 setInterval(function () {
 	// sec = runClock("seconds", -6, sec);
 	hr = runClock("minutes", 0.1, hr);

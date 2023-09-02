@@ -96,13 +96,23 @@ body,
 	left: 50%;
 }
 .seconds {
-	width: 225px;
-	height: 225px;
+	/* width: 225px;
+	height: 225px; */
+	width: 277.539px;
+	height: 277.539px;
 	border: 1px solid var(--colorRed);
 	border-radius: 50%;
 	position: absolute;
 	top: 0;
 	transition: 1s linear;
+	/* transform: rotate(-29.383deg);
+	transform: rotate(-84.428deg);
+	transform: rotate(-117.587deg);
+	transform: rotate(-160.766deg);
+	transform: rotate(124.343deg);
+	transform: rotate(57.89deg);
+	transform: rotate(3.243deg);
+	transform: rotate(-16.36deg); */
 	animation: circleRotate 60s linear infinite;
 }
 
@@ -114,33 +124,33 @@ body,
 }
 @keyframes circleRotate {
 	0% {
-		transform: translate(0, 0) rotate(0deg);
+		transform: translate(0, 0) rotate(0);
 	}
 	12.5% {
-		transform: translate(70px, 10%) rotate(-45deg);
+		transform: translate(65px, 10%) rotate(-45deg);
 	}
 	25% {
-		transform: translate(110px, 40%) rotate(-90deg);
+		transform: translate(85px, 35%) rotate(-90deg);
 	}
 
 	37.5% {
-		transform: translate(70px, 88%) rotate(-135deg);
+		transform: translate(65px, 50%) rotate(-135deg);
 	}
 
 	50% {
-		transform: translate(0, 100%) rotate(-180deg);
+		transform: translate(0, 62%) rotate(-180deg);
 	}
 
 	62.5% {
-		transform: translate(-70px, 88%) rotate(-225deg);
+		transform: translate(-65px, 50%) rotate(-225deg);
 	}
 
 	75% {
-		transform: translate(-110px, 40%) rotate(-270deg);
+		transform: translate(-85px, 35%) rotate(-270deg);
 	}
 
 	87.5% {
-		transform: translate(-70px, 10%) rotate(-315deg);
+		transform: translate(-65px, 10%) rotate(-315deg);
 	}
 
 	100% {
