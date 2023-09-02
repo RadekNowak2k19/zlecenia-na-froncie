@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--colorBlack: #000;
+	--colorRed: #eb5453;
+	--fontFamily: "News Cycle", sans-serif;
+}
+
+body,
+#root,
+.clock-container,
+.clock {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+body,
+#root {
+	background-color: var(--colorBlack);
+	height: 100vh;
+	width: 100%;
+}
+.clock-container {
+	width: 480px;
+	height: 480px;
+	flex-shrink: 0;
+	border-radius: 480px;
+	border: 1px solid var(--colorRed);
+	position: relative;
+}
+.heading {
+	position: absolute;
+	color: var(--Red, #eb5453);
+	font-family: News Cycle;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -1px;
+	top: 0;
+	left: -10%;
+}
+.clock {
+	border: 1px solid var(--Red, #eb5453);
+	border-radius: 450px;
+	height: 450px;
+	flex-shrink: 0;
+	position: relative;
+	width: 450px;
+}
+.center {
+	flex-shrink: 0;
+	height: 20px;
+	fill: var(--colorRed);
+	position: relative;
+	stroke-width: 1px;
+	stroke: var(--colorRed);
+	width: 20px;
+}
+.svg-element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	isolation: isolate;
+}
+.minutes,
+.hours {
+	position: absolute;
+	border: 1px solid var(--colorRed);
+	flex-shrink: 0;
+	background: var(--colorBlack);
+	z-index: -10;
+}
+.minutes {
+	width: 4px;
+	height: 186px;
+	top: 50%;
+	left: 50%;
+	transform-origin: top;
+	transform: translateX(-50%) rotate(0deg);
+	transition: all 1s linear;
+}
+.hours {
+	width: 6px;
+	height: 108px;
+	transform: translateX(-50%) rotate(90deg);
+	transform-origin: top;
+	top: 50%;
+	left: 50%;
+}
+.seconds {
+	width: 225px;
+	height: 225px;
+	border: 1px solid var(--colorRed);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	transition: 1s linear;
+	animation: circleRotate 60s linear infinite;
+}
+
+.dot {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -40%);
+}
+@keyframes circleRotate {
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	12.5% {
+		transform: translate(70px, 10%) rotate(-45deg);
+	}
+	25% {
+		transform: translate(110px, 40%) rotate(-90deg);
+	}
+
+	37.5% {
+		transform: translate(70px, 88%) rotate(-135deg);
+	}
+
+	50% {
+		transform: translate(0, 100%) rotate(-180deg);
+	}
+
+	62.5% {
+		transform: translate(-70px, 88%) rotate(-225deg);
+	}
+
+	75% {
+		transform: translate(-110px, 40%) rotate(-270deg);
+	}
+
+	87.5% {
+		transform: translate(-70px, 10%) rotate(-315deg);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(-360deg);
+	}
+}
